@@ -14,7 +14,7 @@
  * ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
  * WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
  * ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
- * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. */
+ * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. 
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdint.h>
@@ -155,7 +155,8 @@ static void getmonsize(int8_t, int16_t *, int16_t *, uint16_t *, uint16_t *,cons
 static void noborder(int16_t *,struct client *, bool);
 static void movepointerback(const int16_t, const int16_t, const struct client *);
 static void snapwindow(struct client *);
-#include "config.h"
+#include "config.h"*/
+#include "2bwm.h"
 
 ///---Function bodies---///
 void
@@ -2068,7 +2069,7 @@ unmaxwin(struct client *client){
 			ewmh->_NET_WM_STATE, XCB_ATOM_ATOM, 32, 0, NULL);
 }
 
-void 
+void
 maxwin(struct client *client, uint8_t with_offsets){
 	uint32_t values[4];
 	int16_t mon_x, mon_y;
@@ -2569,7 +2570,7 @@ configurerequest(xcb_generic_event_t *ev)
 			if (!client->maxed && !client->vertmaxed)
 				client->height = e->height;
 
-		
+
 		if (e->value_mask & XCB_CONFIG_WINDOW_X)
 		 	if (!client->maxed && !client->hormaxed)
 				client->x = e->x;
