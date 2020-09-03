@@ -9,10 +9,10 @@ X11_INCLUDE?=/usr/local/include
 
 #CC=clang
 DIST=2bwm-$(VERSION)
-SRC=2bwm.c list.h hidden.c config.h
+SRC=2bwm.h 2bwm.c list.h hidden.c config.h
 DISTFILES=Makefile README.md TODO 2bwm.man $(SRC)
 CFLAGS+=-Os -s -I${X11_INCLUDE} \
-		-DTWOBWM_PATH=\"${TWOBWM_PATH}\" 
+		-DTWOBWM_PATH=\"${TWOBWM_PATH}\"
 
 LDFLAGS+=-L${PREFIX}/${LIB_SUFFIX} -lxcb -lxcb-randr -lxcb-keysyms \
 		 -lxcb-icccm -lxcb-ewmh -lxcb-xrm
@@ -27,7 +27,7 @@ all: $(TARGETS)
 hidden: hidden.c
 	$(CC) -o $@ $(CFLAGS) hidden.c $(LDFLAGS)
 
-2bwm.o: 2bwm.c list.h config.h Makefile
+2bwm.o: 2bwm.c 2bwm.h list.h config.h Makefile
 
 install: $(TARGETS)
 	test -d $(DESTDIR)$(PREFIX)/bin || mkdir -p $(DESTDIR)$(PREFIX)/bin
