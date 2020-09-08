@@ -21,7 +21,7 @@ OBJS=$(SRC:%.c=%.o)
 
 all: $(TARGETS)
 
-2bwm: $(OBJS)
+2bwm: 2bwm.o
 	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $<
 
 hidden: hidden.c
