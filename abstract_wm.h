@@ -4,17 +4,17 @@
  * Integrador 1: Mpi v2                                                            *
  * Archivo abstract_wm.h                                                          *
  ***********************************************************************************/
-#if !defined(NULL)
-#define NULL 0
-#endif
-#if !defined(FALSE)
-#define FALSE 0
-#endif
-#if !defined(TRUE)
-#define TRUE 1
-#endif
 #ifndef __ABSTRACT_WM_H_INCLUDED__
 #define __ABSTRACT_WM_H_INCLUDED__
+  #ifndef NULL
+  #define NULL 0
+  #endif
+  #ifndef FALSE
+  #define FALSE 0
+  #endif
+  #ifndef TRUE
+  #define TRUE 1
+  #endif
   #include <stdio.h>
   #include <stdbool.h>
   #include <stdint.h>
@@ -155,5 +155,4 @@
   static void noborder(int16_t *,struct client *, bool);
   static void movepointerback(const int16_t, const int16_t, const struct client *);
   static void snapwindow(struct client *);
-  #include "config.h"
 #endif
