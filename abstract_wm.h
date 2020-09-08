@@ -1,7 +1,8 @@
 /***********************************************************************************
  * Universidad Nacional Arturo Jauretche                                           *
  * Autor: Rosatto Daniel                                                           *
- * Archivo abstract_wm.h                                                           *
+ * Integrador 1: Mpi v2                                                            *
+ * Archivo abstract_wm.h                                                          *
  ***********************************************************************************/
 #if !defined(NULL)
 #define NULL 0
