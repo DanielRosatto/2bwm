@@ -34,12 +34,12 @@ xcb_atom_t wm_icon_name;
 bool printcommand = false;
 bool iconname     = false;
 
-static uint32_t get_wm_state(xcb_drawable_t win);
-static int findhidden(void);
-static void init(void);
-static void cleanup(void);
-static xcb_atom_t getatom(char *atom_name);
-static void printhelp(void);
+uint32_t get_wm_state(xcb_drawable_t win);
+int findhidden(void);
+void init(void);
+void cleanup(void);
+xcb_atom_t getatom(char *atom_name);
+void printhelp(void);
 
 uint32_t get_wm_state(xcb_drawable_t win)
 {

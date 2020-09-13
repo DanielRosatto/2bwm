@@ -1,5 +1,6 @@
 #ifndef __DEFINITIONS_H_INCLUDED__
 #define __DEFINITIONS_H_INCLUDED__
+  #include <xcb/xcb_keysyms.h>
   #define WORKSPACES      10
   #define BUTTONMASK      XCB_EVENT_MASK_BUTTON_PRESS|XCB_EVENT_MASK_BUTTON_RELEASE
   #define NET_WM_FIXED    0xffffffff  // Value in WM hint which means this window is fixed on all workspaces.
